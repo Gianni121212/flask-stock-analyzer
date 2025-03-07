@@ -826,7 +826,6 @@ class StockAnalyzer:
 4. 策略建議與風險分析（提供買入、賣出或持有建議，並說明理由）
 5. 講解該股票近期相關新聞並對其的影響分析（結合情緒分析）
 6. 綜合分析給出結論（可加入給你的其他數據或個人見解）
-7.請問資金如何，
 
 具體要求：
 - 解釋 RSI 的超買超賣情況
@@ -1016,4 +1015,4 @@ def get_stock_change(ticker):
         return jsonify({'error': str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=False)
